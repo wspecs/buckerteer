@@ -69,9 +69,9 @@ export function buildNodeProject() {
 
 export function buildDocker(imageName: string) {
   shell.exec(`sudo docker build -t ${imageName} .`);
-  //   shell.exec(
-  //     `docker images | grep none | awk '{ print $3; }' | xargs docker rmi`
-  //   );
+  shell.exec(
+    `docker images | grep none | awk '{ print $3; }' | xargs docker rmi`
+  );
 }
 
 export function createDomainFolder(domain: string) {
@@ -87,8 +87,8 @@ export function composeDocker(specs: any) {
 }
 
 export function startDockerProject() {
+  shell.exec('sudo docker-compose down');
   shell.exec('sudo docker-compose up -d');
-  shell.exec('sudo docker-compose restart');
 }
 
 export function fetchAndInstallApps(bucketName: string) {
