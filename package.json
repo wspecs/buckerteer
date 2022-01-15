@@ -16,7 +16,7 @@
     "dot-object": "^1.7.1",
     "great-logs": "0.0.4",
     "prompts": "^2.0.1",
-    "shelljs": "^0.8.3"
+    "shelljs": "^0.8.5"
   },
   "description": "Utility to generate Typescript nodejs modules.",
   "devDependencies": {
